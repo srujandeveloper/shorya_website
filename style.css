@@ -27,6 +27,27 @@ h4,
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.ring a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* focus for other interactive elements */
+.socials a:focus,
+.avatar:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .container {
   position: relative;
   height: 100vh;
@@ -1301,4 +1322,5 @@ a {
   .span-2 {
     font-size: 0.95rem !important;
   }
+
 }
